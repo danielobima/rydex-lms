@@ -1,9 +1,22 @@
 import { Button, Divider, Stack, TextField, Typography } from "@mui/material";
-import { GoogleLogin } from "@react-oauth/google";
+import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 import PageComponent from "../../components/pageComponent";
 
 const LoginPage = () => {
   const width = "300px";
+
+  const login = async (creds: CredentialResponse) => {
+    try {
+      let response = await axios.post("http://localhost:8080/login", creds);
+
+      console.log(response.data);
+      alert("success");
+    } catch (err) {
+      console.log(err);
+      alert("something went wrong");
+    }
+  };
   return (
     <PageComponent
       sx={{
@@ -33,7 +46,9 @@ const LoginPage = () => {
         <GoogleLogin
           size="large"
           width={width}
-          onSuccess={(response) => console.log(response)}
+          onSuccess={(response) => {
+            login(response);
+          }}
           onError={() => console.log("err")}
         />
         <Divider />
