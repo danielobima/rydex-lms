@@ -31,8 +31,7 @@ const ChatBox = () => {
           <MessageBox isSent={true} date="24/02/2023" message="Thanks" />
         </Stack>
         <Stack direction="row">
-          <TextField label="Message" sx={{ width: "100%" }} />
-          <Button variant="contained" startIcon={<SendIcon/>}>Send</Button>
+          <TextField label="Message" sx={{ width: "100%"}} variant="filled"/><Button variant="contained" startIcon={<SendIcon/>} sx={{ width: "20%"}}>Send</Button>
         </Stack>
       </Stack>
     </Stack>
