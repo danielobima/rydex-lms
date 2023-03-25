@@ -1,6 +1,7 @@
-import { Stack, TextField, Typography } from "@mui/material";
+import { Button, Stack, TextField, Typography } from "@mui/material";
 import ChatDivider from "./chatDivider";
 import MessageBox from "./messageBox";
+import SendIcon from '@mui/icons-material/Send';
 
 const ChatBox = () => {
   return (
@@ -31,6 +32,7 @@ const ChatBox = () => {
         </Stack>
         <Stack direction="row">
           <TextField label="Message" sx={{ width: "100%" }} />
+          <Button variant="contained" startIcon={<SendIcon/>}>Send</Button>
         </Stack>
       </Stack>
     </Stack>
