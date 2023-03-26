@@ -47,7 +47,6 @@ export default function students() {
           <Typography variant="h5">Form 3 Students</Typography>
         </Stack>
       </Stack>
-        <Stack direction={"row"} sx={{ alignItems: "center",}}>
           <Typography
             sx={{
               color: "#016FB9",
@@ -59,12 +58,12 @@ export default function students() {
           >
             Students
           </Typography>
-        </Stack>
       <div
         style={{
           height: "612px",
-          width: "960px",
-          margin: "auto",
+          width: "1100px",
+          borderRadius: '4px',
+          
           backgroundColor: "#FFFFFF",
           boxShadow: "0px 10px 20px 10px #0000001A",
         }}
