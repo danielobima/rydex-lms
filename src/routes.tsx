@@ -5,6 +5,8 @@ import Index from "./pages/index";
 import Layout from "./pages/layout";
 import LoginPage from "./pages/login/login";
 import MessagesPage from "./pages/messages/messages";
+import Students from "./pages/classes/components/students"
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -13,6 +15,7 @@ const AppRoutes = () => {
           <Route index element={<Index />} />
           <Route path="/classes" element={<Classes />} />
           <Route path="/classes/:classID" element={<ClassPage />} />
+          <Route path="/classes/classID/students" element={<Students />}/>
           <Route path="/messages" element={<MessagesPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
