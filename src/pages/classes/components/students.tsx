@@ -39,43 +39,45 @@ const rows = [
 export default function students() {
   return (
     <PageComponent>
-      <Stack direction={"row"} sx={{ alignItems: "center"}} spacing={1}>
-        <IconButton   href="/classes/className">
-          <ArrowBack />
-        </IconButton>
-        <Stack >
-          <Typography variant="h5">Form 3 Students</Typography>
+      <Stack direction={"row"} spacing={1}>
+        <Stack>
+          <IconButton href="/classes/className">
+            <ArrowBack />
+          </IconButton>
         </Stack>
-      </Stack>
+        <Stack direction={"column"} sx={{ alignItems: "start", rowGap: '10px' }}>
+          <Typography variant="h5">Form 3 Students</Typography>
           <Typography
             sx={{
               color: "#016FB9",
-              fontWeight: 700, 
-            //   border: "2px solid red",
-              width: '100px',
-              marginLeft: '25px'
+              fontWeight: 700,
+              //   border: "2px solid red",
+              width: "100px",
+              //   marginLeft: '25px'
             }}
           >
             Students
           </Typography>
-      <div
-        style={{
-          height: "612px",
-          width: "1100px",
-          borderRadius: '4px',
-          
-          backgroundColor: "#FFFFFF",
-          boxShadow: "0px 10px 20px 10px #0000001A",
-        }}
-      >
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-        />
-      </div>
+          <div
+            style={{
+              height: "612px",
+              width: "1100px",
+              borderRadius: "4px",
+
+              backgroundColor: "#FFFFFF",
+              boxShadow: "0px 10px 20px 10px #0000001A",
+            }}
+          >
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              //   pageSize={5}
+              //   rowsPerPageOptions={[5]}
+              checkboxSelection
+            />
+          </div>
+        </Stack>
+      </Stack>
     </PageComponent>
   );
 }
