@@ -17,6 +17,7 @@ const Classes = () => {
           ),
         }}
         label="Search classes"
+         variant="filled"
         sx={{ width: "350px" }}
       />
       <Stack sx={{ width: "100%" }} spacing={4} direction="row">
