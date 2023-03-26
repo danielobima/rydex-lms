@@ -7,6 +7,7 @@ import LoginPage from "./pages/login/login";
 import MessagesPage from "./pages/messages/messages";
 import Students from "./pages/classes/components/students"
 import Assignments from "./pages/classes/components/assignments";
+import LessonPlan from "./pages/classes/components/lessonPlan";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
           <Route path="/classes/:classID" element={<ClassPage />} />
           <Route path="/classes/classID/students" element={<Students />}/>
           <Route  path='/classes/classID/assignments' element={<Assignments />}/>
+          <Route path="/classes/classID/plan" element={<LessonPlan />}/>
           <Route path="/messages" element={<MessagesPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
