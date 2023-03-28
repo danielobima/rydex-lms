@@ -1,7 +1,7 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import PageComponent from "../../../components/pageComponent";
 import { ArrowBack } from "@mui/icons-material";
-import { IconButton, Stack, Typography } from "@mui/material";
+import { Button, IconButton, Stack, Typography } from "@mui/material";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -39,13 +39,17 @@ const rows = [
 export default function students() {
   return (
     <PageComponent>
-      <Stack direction={"row"} spacing={1}>
+      <Stack direction={"row"} spacing={1} sx={{ width: "100%" }}>
         <Stack>
           <IconButton href="/classes/className">
             <ArrowBack />
           </IconButton>
         </Stack>
-        <Stack direction={"column"} sx={{ alignItems: "start", rowGap: '10px' }}>
+        <Stack
+          direction={"column"}
+          spacing={1}
+          sx={{ alignItems: "start", width: "100%" }}
+        >
           <Typography variant="h5">Form 3 Students</Typography>
           <Typography
             sx={{
@@ -58,10 +62,10 @@ export default function students() {
           >
             Students
           </Typography>
-          <div
-            style={{
+          <Stack
+            sx={{
               height: "612px",
-              width: "1100px",
+              width: "100%",
               borderRadius: "4px",
 
               backgroundColor: "#FFFFFF",
@@ -75,7 +79,7 @@ export default function students() {
               //   rowsPerPageOptions={[5]}
               checkboxSelection
             />
-          </div>
+          </Stack>
         </Stack>
       </Stack>
     </PageComponent>

@@ -18,6 +18,7 @@ const SideNav = () => {
         sx={{
           position: "fixed",
           top: "64px",
+          zIndex: 9,
           left: 0,
           bgcolor: "#0D4C6F",
           width: "208px",

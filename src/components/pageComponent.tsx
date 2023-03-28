@@ -9,7 +9,13 @@ type Props = {
 const PageComponent: FC<Props> = ({ children, sx, spacing }) => {
   return (
     <Stack
-      sx={{ width: "calc(100% - 13rem)", px: 4, py: 4, ...sx }}
+      sx={{
+        width: "calc(100% - 13rem)",
+        px: 4,
+        py: 4,
+        overflow: "auto",
+        ...sx,
+      }}
       spacing={spacing ?? 2}
     >
       {children}
