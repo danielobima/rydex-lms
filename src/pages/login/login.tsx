@@ -1,22 +1,14 @@
 import { Button, Divider, Stack, TextField, Typography } from "@mui/material";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import googleLogin from "../../api/auth/login";
 import PageComponent from "../../components/pageComponent";
 
 const LoginPage = () => {
   const width = "300px";
+  const navigate = useNavigate();
 
-  const login = async (creds: CredentialResponse) => {
-    try {
-      let response = await axios.post("http://localhost:8080/login", creds);
-
-      console.log(response.data);
-      alert("success");
-    } catch (err) {
-      console.log(err);
-      alert("something went wrong");
-    }
-  };
   return (
     <PageComponent
       sx={{
@@ -47,7 +39,15 @@ const LoginPage = () => {
           size="large"
           width={width}
           onSuccess={(response) => {
-            login(response);
+            googleLogin(response)
+              .then(() => {
+                navigate("/");
+              })
+              .catch((err) => {
+                console.log(err);
+                alert("Something went wrong");
+                //TODO: implement snack bar here
+              });
           }}
           onError={() => console.log("err")}
         />

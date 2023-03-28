@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import AuthProvider from "./context/authContext";
 import AppRoutes from "./routes";
 
 //signInCallBack
@@ -14,7 +15,9 @@ function App() {
   return (
     <GoogleOAuthProvider clientId="250655552158-4kf9cp5poe7ha9h6g88pna6ra1bt80p1.apps.googleusercontent.com">
       <ThemeProvider theme={theme}>
-        <AppRoutes />
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
       </ThemeProvider>
     </GoogleOAuthProvider>
   );

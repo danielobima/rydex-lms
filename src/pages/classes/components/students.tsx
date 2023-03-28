@@ -67,7 +67,6 @@ export default function students() {
               height: "612px",
               width: "100%",
               borderRadius: "4px",
-
               backgroundColor: "#FFFFFF",
               boxShadow: "0px 10px 20px 10px #0000001A",
             }}
