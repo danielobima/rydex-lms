@@ -3,7 +3,7 @@ import { ReactComponent as Classroom } from "../assets/icons/classroom-white.svg
 import { ReactComponent as Envelope } from "../assets/icons/envelope-white.svg";
 import { Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { Home } from "@mui/icons-material";
+import { AddTask, CheckBoxOutlined, Home, NoteAltOutlined, Task, TaskOutlined } from "@mui/icons-material";
 
 const SideNav = () => {
   const navigate = useNavigate();
@@ -37,6 +37,18 @@ const SideNav = () => {
           icon={<Classroom width={24} height={24} fill="white" />}
         >
           <Typography>Classes</Typography>
+        </SideNavButton>
+        <SideNavButton
+          href="/assignments"
+          icon={<NoteAltOutlined width={24} height={24} fill="white" />}
+        >
+          <Typography>Assignments</Typography>
+        </SideNavButton>
+        <SideNavButton
+          href="/markbook"
+          icon={<CheckBoxOutlined width={24} height={24} fill="white" />}
+        >
+          <Typography>Mark book</Typography>
         </SideNavButton>
         <SideNavButton
           href="/messages"
