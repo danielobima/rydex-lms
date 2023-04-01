@@ -2,12 +2,12 @@ import { CredentialResponse } from "@react-oauth/google";
 import axios from "axios";
 import { authUrl } from "../apiUrls";
 
-const googleLogin = (creds: CredentialResponse) =>
+const googleTeacherLogin = (creds: CredentialResponse) =>
   new Promise(async (resolve, reject) => {
     {
       try {
         console.log(creds);
-        let response = await axios.post(authUrl + "/login", creds, {
+        let response = await axios.post(authUrl + "/teacher/login", creds, {
           withCredentials: true,
         });
 
@@ -18,4 +18,4 @@ const googleLogin = (creds: CredentialResponse) =>
     }
   });
 
-export default googleLogin;
+export default googleTeacherLogin;
