@@ -1,5 +1,5 @@
 import axios from "axios";
-import baseUrl from "../baseUrl";
+import { authUrl } from "../apiUrls";
 
 export type UserDetails = {
   user_id: string;
@@ -17,7 +17,7 @@ type response = {
 const checkAuth = () =>
   new Promise<response>(async (resolve, reject) => {
     try {
-      let response = await axios.get<response>(`${baseUrl}/checkToken`, {
+      let response = await axios.get<response>(`${authUrl}/checkToken`, {
         withCredentials: true,
       });
       console.log(response.data);
