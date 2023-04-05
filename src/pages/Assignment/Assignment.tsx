@@ -32,7 +32,8 @@ const Assignments = () => {
               </InputAdornment>
             ),
           }}
-          label="Search classes"
+          label="Search assignments"
+          placeholder="Form 3"
           variant="filled"
           sx={{ width: "350px" }}
         />
