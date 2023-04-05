@@ -2,6 +2,7 @@ import DashboardIconCard from "./componennts/dashboardIconCard";
 import { ReactComponent as Classroom } from "../../assets/icons/classroom-color.svg";
 import { ReactComponent as Envelope } from "../../assets/icons/envelope-color.svg";
 import { ReactComponent as TestPassed } from "../../assets/icons/planner.svg";
+import { ReactComponent as Task } from "../../assets/icons/task.svg";
 import Announcement from "./componennts/announcement";
 import { Box, Stack, Typography } from "@mui/material";
 import PageComponent from "../../components/pageComponent";
@@ -16,6 +17,11 @@ const Index = () => {
       name: "Messages",
       href: "/messages",
       id: "messages",
+    },
+    {
+    name: "Assignments",
+      href: "/assignments",
+      id: "Assignments",
     },
     {
     name: "Mark book",
@@ -35,6 +41,7 @@ const Index = () => {
     classes: <Classroom width={64} height={64} />,
     messages: <Envelope width={64} height={64} />,
     markbook: <TestPassed width={64} height={64} />,
+    Assignments: <Task width={64} height={64} />
   };
 
   return (
