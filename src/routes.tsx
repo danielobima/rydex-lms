@@ -8,6 +8,7 @@ import MessagesPage from "./pages/messages/messages";
 import Students from "./pages/classes/components/students"
 import Assignments from "./pages/classes/components/assignments";
 import LessonPlan from "./pages/classes/components/lessonPlan";
+import MarkBook from "./pages/markbook/markBook"
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
           <Route  path='/classes/classID/assignments' element={<Assignments />}/>
           <Route path="/classes/classID/plan" element={<LessonPlan />}/>
           <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/markbook" element={<MarkBook />}/>
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
