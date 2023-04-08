@@ -2,7 +2,7 @@ import { Button, Divider, Stack, TextField, Typography } from "@mui/material";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import googleLogin from "../../api/auth/login";
+import googleTeacherLogin from "../../api/auth/login";
 import PageComponent from "../../components/pageComponent";
 
 const LoginPage = () => {
@@ -39,7 +39,7 @@ const LoginPage = () => {
           size="large"
           width={width}
           onSuccess={(response) => {
-            googleLogin(response)
+            googleTeacherLogin(response)
               .then(() => {
                 navigate("/");
               })
